@@ -75,8 +75,7 @@ document.addEventListener("DOMContentLoaded", function() { startplayer(); }, fal
 var player;
 
 // music player function starts here
-function startplayer() 
-{
+function startplayer() {
  player = document.getElementById('music_player');
 //  hide default controls
  player.controls = false;
