@@ -1,0 +1,250 @@
+/* Hide cards on load */
+#videoCard{
+    display: none;
+}
+#workhistory{
+    display: none;
+}
+#musicCard{
+    display: none;
+}
+#portfolioContent{
+    display: none;
+}
+#contactContent{
+    display: none;
+}
+
+body{
+    /* set font for the entire page */
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url("https://i.imgur.com/lxdXhnM.jpg");
+    background-color: #6461618a;
+    margin: 0;
+    background-color: rgba(194, 190, 190, 0.61);
+}
+/* style all links */
+a {
+    color: rgb(255, 255, 255);
+}
+a:hover{
+   color: rgb(69, 189, 179);
+   /* background-color: rgba(95, 158, 160, 0.753); */
+}
+a img:hover{
+    background-color: rgba(95, 158, 160, 0.199);    
+}
+header a{
+    color: gray;
+
+}
+#NavbarNametag a{
+    color: white;
+}
+/* main page styles */
+main{
+    left: 0px;
+    float: left;
+    /* for fixed footer */
+    margin-bottom: 50px;
+}
+
+aside{
+    top: 0px;
+    float: right;
+    margin-bottom: 50px;
+}
+/* style the header contents */
+header{
+    width: 100%;
+    height: 50px;
+    border: 5px;
+}
+
+
+/* weird custom nametag thingy */
+#NavbarNametag{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    margin-right: 50%;
+    padding: 0px;
+    height: 50px;
+    float: left;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive, 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: rgb(89, 170, 164);
+    /* position: absolute; */
+}
+
+/* Container holding the image and the text in the profile images*/
+.portfolio-item .text-block {
+    height: 40px;
+    position: absolute;
+    top: 70%;
+    left: 30px;
+    right: 30px;
+    background-color:rgba(89, 170, 165, 0.950);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+/* changing bootsrtap things I don't like */
+.clearfix{
+    overflow: auto;
+}
+.nav-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card{
+    margin: 15px;
+    border-color: rgba(196, 191, 191, 0.747);
+    border-radius: 0px;
+}
+.img-card{
+    width: 100%;
+    height: 100%;
+}
+.card-title{
+    color: rgb(89, 170, 164);
+}
+.card-text{
+    color: gray;
+}
+
+.portfolio-item a img{
+    width: 100%;
+}
+.card img {
+    height: 0 auto;
+    width: 50%;
+    float: left;
+    padding: 15px;
+}
+.btn{
+    background-color: rgb(89, 170, 164);
+    border-color: rgb(89, 170, 164);
+    border-radius: 0px;
+}
+
+
+
+
+/* footer stuff below */
+.footer-container{
+    height: 55px;
+    border: 0,0,0,0;
+    background-color: rgb(49, 48, 48);
+}
+
+/* footer images */
+.footer-img{
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    margin: 5px;
+    padding: 5px;   
+}
+.footer-img:hover{
+    background-color:rgba(89, 170, 165, 0.274);
+    border-radius: 25px;
+}
+
+
+.footer-top-strip{
+    background-color:  rgb(89, 170, 164);
+    top: 0px;
+    height: 5px;
+    width: 100%;
+}
+
+
+
+.plainfooter{
+    top: 0px;
+    border-top: 10px;
+    border-color: rgba(89, 170, 165, 0.950);
+    height: 50px;
+}
+
+/* styles for id  footer music player */
+#wrapper{
+    float: center;
+    text-align:center;
+    margin:0 auto;
+    padding:0px;
+    width:100%;
+    display: none;
+}
+
+#player{
+    bottom: 0;
+    float: left;
+    width: 100%;
+    height: 50px;
+    padding: 5, 5, 5, 5;
+    box-sizing:border-box;
+    background-color: rgba(89, 170, 165, 0.950);
+    z-index: 2;
+}
+/* costome player icons */
+input[type="image"] {
+ height:30px;
+ margin-top:10px;
+}
+input[type="range"] {
+    height:30px;
+    margin-top:10px;
+   }
+   #change_vol{
+    height:30px;
+    margin-top:10px;
+   }
+#vol_img {
+    padding: 20px;
+    width:30px;
+}
+
+/* @media for tablets and phones */
+@media screen and (max-width: 550px) {
+    #topNav{
+        width: 100%;
+    }
+    ul#topNav.nav{
+        height: 50px;
+
+    }
+    #change_vol{
+        display: none;
+    }
+    main{
+        margin-top: 80px;
+    }
+  
+    #NavbarNametag{
+        text-align: center;
+        width: 100%;
+        margin: unset;
+        padding: 0px;
+        background-color: rgb(89, 170, 164);
+        /* position: absolute; */
+    }
+
+
+}
+@media screen and (max-width: 880px) {
+
+  
+    #NavbarNametag{
+        margin-right: -15%;
+        /* position: absolute; */
+    }
+
+
+
+}
