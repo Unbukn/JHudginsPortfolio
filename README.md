@@ -1,6 +1,6 @@
   # James Hudgins Portfolio
   ## Description
-  Portfolio demonstrating my skills as a front end web developer. https://github.com/Unbukn/JHudginsPortfolio
+  Portfolio demonstrating my skills as a front end web developer. https://unbukn.github.io/JHudginsPortfolio/
   ### Table of contents
   1. [Description](#Description)
   2. [Table of Contents](#Table-of-Contents)
