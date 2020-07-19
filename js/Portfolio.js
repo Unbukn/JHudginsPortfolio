@@ -70,36 +70,4 @@ $("#hidePlayer").on("click", function() {
     
 });
 
-// // PLayer function
-// document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
-// var player;
-
-// // music player function starts here
-// function startplayer() {
-//  player = document.getElementById('music_player');
-// //  hide default controls
-//  player.controls = false;
-// }
-
-// // play
-// function play_aud() 
-// {
-//  player.play();
-// } 
-// // pause
-// function pause_aud() 
-// {
-//  player.pause();
-// }
-// // stop
-// function stop_aud() 
-// {
-//  player.pause();
-//  player.currentTime = 0;
-// }
-// // change the vol
-// function change_vol()
-// {
-//  player.volume=document.getElementById("change_vol").value;
-// }
  
