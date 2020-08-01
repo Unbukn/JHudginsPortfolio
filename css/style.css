@@ -11,17 +11,39 @@
 #portfolioContent{
     display: none;
 }
+.jumbotron{
+    margin: 0px;
+    padding-bottom: 30px;
+}
+.whJumbotron{
+    background-color: rgb(107, 146, 156);
+    padding: 15px;
+}
+.AboutMeJumbo{
+    padding: 30px;
+    background-color: #007bff;
+    color: whitesmoke;
+
+}
+.videoCarousel{
+    max-height: 700px;
+}
+
+.highcharts-background .highcharts-plot-border .highcharts-div #highChart{
+    color: black;
+    background-color: black;
+}
+
 #contactContent{
     display: none;
 }
-
 body{
     /* set font for the entire page */
     font-family: 'Ubuntu', sans-serif;
-    background-image: url("https://i.imgur.com/lxdXhnM.jpg");
-    background-color: #6461618a;
+    /* background-image: url("https://i.imgur.com/lxdXhnM.jpg"); */
+    background-color: #E9ECEF;
     margin: 0;
-    background-color: rgba(194, 190, 190, 0.61);
+    margin-bottom: 50px;
 }
 /* style all links */
 a {
@@ -42,18 +64,8 @@ header a{
     color: white;
 }
 /* main page styles */
-main{
-    left: 0px;
-    float: left;
-    /* for fixed footer */
-    margin-bottom: 50px;
-}
 
-aside{
-    top: 0px;
-    float: right;
-    margin-bottom: 50px;
-}
+
 /* style the header contents */
 header{
     width: 100%;
@@ -101,14 +113,12 @@ header{
     margin-bottom: 10px;
 }
 .card{
-    margin: 15px;
+    margin: 5px;
     border-color: rgba(196, 191, 191, 0.747);
-    border-radius: 0px;
+    border-radius: 15px;
+    padding: 10px;
 }
-.img-card{
-    width: 100%;
-    height: 100%;
-}
+
 .card-title{
     color: rgb(89, 170, 164);
 }
@@ -130,7 +140,6 @@ header{
     border-color: rgb(89, 170, 164);
     border-radius: 0px;
 }
-
 
 
 
@@ -233,6 +242,10 @@ input[type="range"] {
         padding: 0px;
         background-color: rgb(89, 170, 164);
         /* position: absolute; */
+    }
+
+    .aboutmeJumbotron{
+        padding-top: 50px;
     }
 
 

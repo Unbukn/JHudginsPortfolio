@@ -9,326 +9,138 @@
   <!-- link to my stylesheet -->
   <link rel="stylesheet" href="./css/style.css">
   <!-- Linking jQuery -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <!-- highcharts scrips -->
+    <!-- load API and highcharts resorces -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="./code/modules/timeline.js"></script>
+    <script src="https://code.highcharts.com/8.1.0/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
   <!-- link highcharts styles -->
   <link rel="stylesheet" href="./css/highchart.css">
   <!-- linking google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Dancing+Script&family=Ubuntu&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
   <!-- navigation bar starts here (it sticks to top) -->
 <header>
   <div class="fixed-top">
-    <div class="navbar-light bg-light">
+    <div class="navbar-light bg-light fixedTopNav">
       <!-- fancy name tag thingy here -->
-        <div class="nav-item" id="NavbarNametag"><a class="nav-link" href="index.html">James Hudgins</a></div>
+        <div class="nav-item" id="NavbarNametag"><a class="nav-link" href="./index.html">James Hudgins</a></div>
         <ul id="topNav" class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link active" id="AboutMe" href="#AboutMeContent">About</a></li>
+            <li class="nav-item"><a class="nav-link active" id="" href="./index.html">About</a></li>
             <li class="nav-item nav-link">|</li>
-            <li class="nav-item"><a class="nav-link portfolioButton" href="#portfolioContent">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link portfolioButton" href="./Portfolio.html">Portfolio</a></li>
             <li class="nav-item nav-link">|</li>
-            <li class="nav-item"><a class="nav-link contact" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link contact" href="./contact.html">Contact</a></li>
         </ul>
     </div>
-  </div>
 </header>
 
 <!-- main container for all content -->
-<!-- arch this way to music could keep playing while browsing the pages -->
-<main class="container col-10">
-        <!-- about me content -->
-  <div id="AboutMeContent">
-    <div class="card">
-      <div class="card-body clearfix">
-        <h2 class="card-title">About Me</h2>
-        <hr>
-        <img src="https://i.imgur.com/iyKdKO0.jpg" class="card-img-top" alt="Picture of James Allen Hudgins Jr.">
-        <h6>Why I Started Coding:</h6>
-        <p class="card-text">I was 14 years old watching youtube videos on how to host your own private server for a video game called, “Runescape.” I had no idea if I would ever figure everything out but I had an idea of what I wanted to accomplish. Eventually after days of trial and error, I figured out how to get the game running locally. Now let’s be clear, this experience was primarily me making minor changes to open-source code, and I knew little about the mountain of files I had downloaded to my PC. </p>
-        <h6>How Everything Changed:</h6>
-        <p class="card-text">Fortunately, through this process I discovered a great deal about how the game was architected. After combing over the executable files I understood the relationship between the server and client(s). Next, I learned that changes wouldn’t appear in the game unless I ran the compiler. Later, I managed to figure out how to change my firewall settings to allow the server to initialize to an internet-facing port (I know, super dangerous stuff). I had my own community of faithful users vested in changes I made from the base code. This time in life is really what initially piqued my interest in understanding the inner-workings of computer applications. 
-          <h6>Where I'm at Now: </h6>
-          <p class="card-text">Fast forward four years and I’m working to automate software tests at General Dynamics Electric Boat (GDEB). This was my first taste at a practical application of my skills as an engineer. I learned how to keep a system online, create backups, configuration manage products, reduce redundancies, generate SMS alerts, coordinate health checks, and create reports based on analytical data. I think that I will make a good software engineer because I have spent countless hours professionally and independently researching, testing, tinkering, and fiddling with various IDEs, developer tools, and API, and I enjoyed every second. My understanding of software engineering is a bit fragmented at the moment, but with proper instruction, I’m confident that I can enhance my confidence and employability as a software engineer.</p>
-        <br>                
-        <a href="https://www.navsea.navy.mil/" target="blank"><img src="./Assets/Images/subPic.jpg" alt=" cartoon submarine"></a>
-      </div>
-    </div>
-  </div>
-
-      <!-- Portfolio content is here-->
-  <div id="portfolioContent">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Portfolio</h2>
-        <hr>
-        <div class="row">
-          <div class="col-sm-6 text-center">
-            <div class="portfolio-item">
-              <a href="#workhistory"><img class="img-fluid timelineshow" src="https://i.imgur.com/zCQjZPH.gif" alt="animated submarine"></a>
-              <div class="text-block">
-                <a class="timelineshow" href="#workhistory"><h5>Highcharts</h5></a>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid aboutmeJumbotron">
+      <div id="videoCarosel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#videoCarosel" data-slide-to="0" class="active"></li>
+          <li data-target="#videoCarosel" data-slide-to="1"></li>
+          <li data-target="#videoCarosel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video autoplay loop muted class="d-block w-100" alt="Los Angeles" src="https://imgur.com/5YxM9YP.mp4"></video>
+            <div class="container">
+              <div class="carousel-caption text-center">
+                <h1 class="display-3">Development</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 text-center">
-            <div class="portfolio-item">
-              <a href="#videoCard"><img class="img-fluid videoLink1" src="https://i.imgur.com/CJojU4k.jpg" alt="skydiving"></a>
-              <div class="text-block">
-                <a href="#videoCard"><h5 class="videoLink1">Videos</h5></a>
+          <div class="carousel-item">
+            <video autoplay loop muted class="d-block w-100" alt="..." src="https://imgur.com/KCwcGh9.mp4"></video>
+            <div class="container">
+              <div class="carousel-caption text-center">
+                <h1 class="display-3">Testing</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 text-center">
-            <div class="portfolio-item">
-              <a href="https://scratch.mit.edu/projects/386650820/fullscreen/" target="_blank"><img src="https://i.imgur.com/VBNH7H1.gif" alt="Tiger King Game link" ></a>
-              <div class="text-block">
-              <a href="https://scratch.mit.edu/projects/386650820/fullscreen/" target="_blank"><h5>Tiger Game</h5></a>
+          <div class="carousel-item">
+            <video autoplay loop muted class="d-block w-100" alt="..." src="https://imgur.com/W0VVB74.mp4"></video>
+            <div class="container">
+              <div class="carousel-caption text-center">
+                <h1 class="display-3">Development</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 text-center">
-            <div class="portfolio-item">
-              <a href="#wrapper"><img class="img-responsive showplayer" src="https://i.imgur.com/CepSQ28.jpg" alt="Norway"></a>
-              <div class="text-block">
-                <a class="showplayer" href="#wrapper"><h5>Music</h5></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 text-center">
-            <div class="portfolio-item">
-              <a href="https://codejourney.tech/" target="_blank"><img src="https://codejourneydottech.files.wordpress.com/2020/03/logomakr_6zz4i2-1.png" alt="Norway"></a>
-              <div class="text-block">
-                <a href="https://codejourney.tech/" target="_blank"><h5>Code Journey</h5></a>
-                </div>
-              </div>
-            </div>
         </div>
+        <a class="carousel-control-prev" href="#videoCarosel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#videoCarosel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </div>
+    </div>  
   </div>
 
-  <!-- work history starts here -->
-  <div id="workhistory">
-    <div class="card">
-        <div class="card-body clearfix">
-          <h2 class="card-title">Work History</h2>
-          <hr>
-      <!-- highcharts scrips -->
-      <!-- load API and highcharts resorces -->
-      <script src="https://code.highcharts.com/highcharts.js"></script>
-      <script src="./code/modules/timeline.js"></script>
-      <script src="https://code.highcharts.com/8.1.0/modules/exporting.js"></script>
-      <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-      <figure class="highcharts-figure">
-      <div>    
-    <p class="highcharts-description">Hover over skills for additional details.</p>
-    <p><b>Categories:</b></p>
-    <ul>
-        <li style="background-color: #4ed319; text-align: center; list-style: none; max-width: 300px;">Attention to Detail</li>
-        <li style="background-color: #7472f0; text-align: center; list-style: none; max-width: 100px;">Comunication</li>
-        <li style="background-color: #f7f445; text-align: center; list-style: none; max-width: 200px;">Customer Service</li>
-        <li style="background-color: #f53a3a; text-align: center; list-style: none; max-width: 200px;">Problem Solving</li>
-    </ul>
-    </div>
-    <div id="container"></div>
-    </figure>
-    <script>
-    Highcharts.chart('container', {
-        chart: {
-            type: 'timeline',
-                scrollablePlotArea: {
-                minWidth: 1000,
-                maxWidth: 2500,
-                scrollPositionX: 1,
-            }
-        },
-        accessibility: {
-            screenReaderSection: {
-                beforeChartFormat: '<h5>{chartTitle}</h5>' +
-                    '<div>{typeDescription}</div>' +
-                    '<div>{chartSubtitle}</div>' +
-                    '<div>{chartLongdesc}</div>' +
-                    '<div>{viewTableButton}</div>'
-            },
-            point: {
-                valueDescriptionFormat: '{index}. {point.label}. {point.description}.'
-            }
-        },
-        xAxis: {
-            visible: false,
-    },
-        yAxis: {
-            visible: false
-        },
-        title: {
-            text: '2012-2020'
-        },
-        subtitle: {
-            text: 'Listed by name, year, and category.'
-        },
-        colors: [
-            '#4ed319', '#f7f445', '#4ed319', '#f53a3a', '#4ed319','#f7f445', '#7472f0','#f53a3a'
-        ],
-        series: [{
-            data: [{
-                name: 'Design',
-                label: '<i>2012</i>',
-                description: 'Designed plans using computer-aided design (CAD) Catia & Siemens NX. Created  products with engineering and manufacturing techniques in accordance with company drafting principles. Worked with engineers to specify dimensions, materials, and procedures for new designs.'
-            }, {
-                name: 'IT Support',
-                label: '<i>2013</i>',
-                description: 'Demonstrated issued resolution across local area networks (LANs), wide area networks (WANs), and unique business systems. Provided technical assistance design users and answer questions or resolve computer problems via telephone and using RDP. '
-            }, {
-                name: 'Software Testing',
-                label: '<i>2014</i>',
-                description: 'Tested  and evaluated existing network systems. Documented unit, performance, and regression test cases to support major and minor software turnovers. Provided daily, weekly, and monthly burndown of issues and bugs related to my functional area.'
-            }, {
-                name: 'Programming',
-                label: '<i>2015</i>',
-                description: 'Created event-driven and object-oriented solutions to analyze the organization’s performance and possible upgrades.'
-            }, {
-                name: 'QA Automation',
-                label: '<i>2016</i> : ',
-                description: 'Designed and programmed automated test processes to reduce hours spent regression testing a 3500+ user,  4 tier PLM environment.'
-            }, {
-                name: 'Cyber Security',
-                label: '<i>2016</i>',
-                description: 'Ensured the security of applications in my network to reduce both external and insider threat. Continuously monitored my environment for compliance within the  National Institute of Standards and Technology (NIST) cybersecurity framework.'
-            }, {
-                name: 'Project Management',
-                label: '<i>2017</i>',
-                description: 'Ensured the availability of data and network services by coordinating IT activities. Directed the work of computer systems analysts, software developers, information security analysts, and computer support specialists to deliver a quality product on time and within budget.'
-            }, {
-                name: 'Systems Integration',
-                label: '<i>2020</i>',
-                description: 'Supervised the initial installation of my system’s from start to finish by monitoring my project’s progress to ensure that all functionality was incorporated without impediment.'
-}]
-}]});
-        </script>
-          </div>
+<div class="row jumbotron jumbotron-fluid">
+  <div class="container">
+    <h2 class="display-6">Clean & Simple Designs</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card shadow-lg p-3 mb-5 bg-white">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>        
       </div>
     </div>
-
-  <!-- video card here -->
-    <div id="videoCard">
-      <div class="card">
-          <div class="card-body clearfix">
-            <h2 class="card-title">Skydiving Adventure</h2>
-            <hr>
-            <iframe src="https://www.youtube.com/embed/9DIF-gPvK-M" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-      </div>
+    <div class="col-sm-6">
+      <div class="card card shadow-lg p-3 mb-5 bg-white">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>        
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="jumbotron">
+    <p class="lead">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">See Complete Portfolio</a>
+  </div>
+<div class="jumbotron jumbotron-fluid AboutMeJumbo">
+  <h1 class="display-5">About Me</h1>
+  <p class="lead">Mr. James Hudgins is Full Stack Web Developer with over 8 years of experience, during which he has provided system design, software development, testing, certification, business case analysis, and functional audit support to several significant United States Navy submarine programs. As a System Design Engineer with Patrona Corporation, Mr. Hudgins combines development knowledge with his ship design background to engineer solutions that allow rapid transformation required for continuous mission success. Mr. Hudgins is steadfast in the development of secure, modular, DRY applications, even when presented with complex challenges introduced by working in antiquated Department of Defense (DoD) environments.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
 </div>
 
-<!-- Music content here -->
-<div id="musicCard">
-  <div class="card">
-      <div class="card-body clearfix">
-        <h2 class="card-title">My Music</h2>
-        <hr>
-        <div class="row text-center">
-          <div class="col-sm-12">
-            <h3>Top Hip-Hop Tracks</h3>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/533424180&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/448272126&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/485192202&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-          </div>
-          <div class="col-sm-12">
-            <h3>Top R&B Tracks</h3>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/644995290&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/732002176&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/521411793&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-          </div>
 
-          <div class="col-sm-12">   
-            <h3> Featured Artists</h3>
-            <h5>Confetti Murphy</h5>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/520645185&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245820740&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
+<div class="jumbotron">
 
-            <h3> MJS</h3>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/710933317&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-            <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/732601141&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-              <h5> PopGotBarz</h5>
-              <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314438216&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-
-              <h5>Nileak</h5>
-              <iframe class="col-sm-12" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314433019&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe>
-          </div>
-        </div>
-      </div>
-  </div>
 </div>
-
-  <!-- Contact card -->
-        <div id="contactContent">
-          <div class="card">
-              <div class="card-body clearfix">
-                <h2 class="card-title">Contact</h2>
-                <hr>
-               <form action="mailto:james.hudgins.work@gmail.com?subject=Request_for_professional_services" method="post" enctype="text/plain">
-                  <label>What can I help you with?</label>
-                  <select name="name" class="form-control" id="contactMeForm">
-                    <option>I need help designing a new website.</option>
-                    <option>Let's discuss the design of my existing website.</option>
-                    <option>I'd like you to create and/or test applications for my website.</option>
-                    <option>Can you deploy integrated graphics, audio, or video into my website ?</option>
-                    <option>Can you monitor my website’s traffic ?</option>
-                    <option>I need help with something else (Other)</option>
-                  </select>
-                  <br>
-                  <p>Other information:</p>
-                  <input class="form-control" type="text" name="comment" size="50"><br><br>
-                <input class="btn btn-primary" type="submit" value="Send">
-                  </form>
-              </div>
-          </div>
-        </div>
-
-  
-</main>
-
-<!-- Floating sidebar with social media -->
-<aside class="col-xs-2">
-    <div class="card clearfix">
-        <div class="card-body clearfix">
-          <!-- <h4 class="card-title">Social Networks</h4> -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#followModal">Follow Me <span class="badge badge-light">6</span></button>
-
-<!-- Modal -->
-          <div class="modal fade" id="followModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="ModalLabel1">Go ahead, don't be a stranger . . .</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body col-xs-12">
-                  <a href="https://www.linkedin.com/in/james-hudgins-jr-b857a6131/" target="_blank" rel="noopener noreferrer"><h6 class="badge badge-secondary">Linked In</h6></a>
-                  <a href="https://stackoverflow.com/users/13407696/james-hudgins-jr" target="_blank" rel="noopener noreferrer"><h6 class="badge badge-secondary">Stack Overflow</h6></a>
-                  <a href="https://community.sw.siemens.com/s/profile/0054O000007xzgt" target="_blank" rel="noopener noreferrer"><h6 class="badge badge-secondary">TeamCenter Community</h6></a>
-                  <a href="https://www.facebook.com/Jamez1337" target="_blank" rel="noopener noreferrer"><h6 class="badge badge-secondary">Facebook</h6></a>
-                  <a href="https://www.instagram.com/klazzic_thevet/" target="_blank" rel="noopener noreferrer"><h6 class="badge badge-secondary">Instagram</h6></a>
-                  <a href="https://soundcloud.com/klazzic" target="_blank" rel="noopener noreferrer"><h6 class="badge badge-secondary">Sound Cloud</h6></a>
-                  </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">I'm too afraid. . .(go back)</button>
- 
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-    </div>
-</aside>
-
-<br>
-
 
  <!-- footer starts here -->
 <footer class="footer fixed-bottom navbar-dark bg-dark">
