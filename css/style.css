@@ -13,7 +13,7 @@
 }
 .jumbotron{
     margin: 0px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 .whJumbotron{
     background-color: rgb(107, 146, 156);
@@ -21,13 +21,10 @@
 }
 .AboutMeJumbo{
     padding: 30px;
-    background-color: #007bff;
+    background-color: #456588bb;
     color: whitesmoke;
+}
 
-}
-.videoCarousel{
-    max-height: 700px;
-}
 
 .highcharts-background .highcharts-plot-border .highcharts-div #highChart{
     color: black;
