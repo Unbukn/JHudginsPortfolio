@@ -10,21 +10,10 @@
   <link rel="stylesheet" href="./css/style.css">
   <!-- Linking jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-      <!-- highcharts scrips -->
-    <!-- load API and highcharts resorces -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="./code/modules/timeline.js"></script>
-    <script src="https://code.highcharts.com/8.1.0/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    
-  <!-- link highcharts styles -->
-  <link rel="stylesheet" href="./css/highchart.css">
   <!-- linking google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Dancing+Script&family=Ubuntu&display=swap" rel="stylesheet">
-
 </head>
 <body>
-
   <!-- navigation bar starts here (it sticks to top) -->
 <header>
   <div class="fixed-top">
@@ -41,9 +30,9 @@
     </div>
 </header>
 
-<!-- main container for all content -->
+<!-- video carousel-->
   <div class="container">
-    <div class="jumbotron jumbotron-fluid carouselJumbo">
+    <div class="jumbotron jumbotron-fluid">
       <div id="videoCarosel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#videoCarosel" data-slide-to="0" class="active"></li>
@@ -82,7 +71,6 @@
             </div>
           </div>
         </div>
-
         <a class="carousel-control-prev" href="#videoCarosel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -92,50 +80,59 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-    </div>  
+    </div> 
   </div>
 
-<div class="row jumbotron jumbotron-fluid">
+  <!-- recent projects -->
   <div class="container">
-    <h2 class="display-6">Latest Projects. . . </h2>
-    <div class="row">
+    <div class="jumbotron jumbotron-fluid latestProjectsJumbo">
+      <h2 class="display-6">Latest Projects. . . </h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card shadow-lg p-3 mb-5 bg-white">
+            <div class="card-body">
+              <h5 class="card-title">Team Generator</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Dev team html pages</h6>
+              <p class="card-text">Automatically generate a webpage that displays software engineering team.</p>
+              <button type="button" class="btn btn-secondary btn-lg" disabled>Live Demo</button>
+              <a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/Unbukn/Team-generator" role="button">Github Repo</a>
+            </div>        
+        </div>
+      </div>
       <div class="col-sm-6">
-        <div class="card shadow-lg p-3 mb-5 bg-white">
+        <div class="card card shadow-lg p-3 mb-5 bg-white">
           <div class="card-body">
-            <h5 class="card-title">Team Generator</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Dev team html pages</h6>
-            <p class="card-text">Automatically generate a webpage that displays software engineering team.</p>
-            <button type="button" class="btn btn-secondary btn-lg" disabled>Live Demo</button>
-            <a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/Unbukn/Team-generator" role="button">Github Repo</a>
+            <h5 class="card-title">Temperature</h5>
+            <h6 class="card-subtitle mb-2 text-muted">The Mood Stabilizer (Quote App)</h6>
+            <p class="card-text">Temperature is an application that provides users with quotes tailored mood.</p>
+            <a class="btn btn-primary btn-lg" target="_blank" href="https://unbukn.github.io/Project1/" role="button">Live Demo</a>
+            <a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/Unbukn/Project1" role="button">Github Repo</a>
           </div>        
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="card card shadow-lg p-3 mb-5 bg-white">
-        <div class="card-body">
-          <h5 class="card-title">Temperature</h5>
-          <h6 class="card-subtitle mb-2 text-muted">The Mood Stabilizer (Quote App)</h6>
-          <p class="card-text">Temperature is an application that provides users with quotes tailored mood.</p>
-          <a class="btn btn-primary btn-lg" target="_blank" href="https://unbukn.github.io/Project1/" role="button">Live Demo</a>
-          <a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/Unbukn/Project1" role="button">Github Repo</a>
-        </div>        
     </div>
-  </div>
-  </div>
-  <hr class="my-6">
-  <p>Click below to see my entire portfolio.</p>
-  <a class="btn btn-primary btn-lg" href="./Portfolio.html" role="button">See Complete Portfolio</a>
-  </div>
+    <p>Click below to see my entire portfolio.</p>
+    <a class="btn btn-primary btn-lg" href="./Portfolio.html" role="button">See Complete Portfolio</a>
+    </div>  
+  </div>  
+
+
   
-<div class="jumbotron jumbotron-fluid AboutMeJumbo">
-  <h1 class="display-5">About Me</h1>
-  <img style="width: 18rem;" src="https://imgur.com/iyKdKO0.jpeg" class="card-img-top" alt="...">
-  <hr class="my-4">
-  <p class="lead">Mr. James Hudgins is Full Stack Web Developer with over 8 years of experience, during which he has provided system design, software development, testing, certification, business case analysis, and functional audit support to several significant United States Navy submarine programs. As a System Design Engineer with Patrona Corporation, Mr. Hudgins combines development knowledge with his ship design background to engineer solutions that allow rapid transformation required for continuous mission success. Mr. Hudgins is steadfast in the development of secure, modular, DRY applications, even when presented with complex challenges introduced by working in antiquated Department of Defense (DoD) environments.</p>      
-  <p>Click the link below to get in touch.</p>
-  <a class="btn btn-primary btn-lg" href="./contact.html" role="button">Contact Me</a>
-</div>
-</div>
+
+  
+
+
+  <!-- about me jumbotron -->
+    <div class="jumbotron jumbotron-fluid AboutMeJumbo">
+      <h1 class="display-5">About Me</h1>
+      <img style="width: 12rem;" src="https://imgur.com/iyKdKO0.jpeg" class="card-img-personal" alt="...">
+      <p class="lead">Mr. James Hudgins is Full Stack Web Developer with over 8 years of experience, during which he has provided system design, software development, testing, certification, business case analysis, and functional audit support to several significant United States Navy submarine programs. As a System Design Engineer with Patrona Corporation, Mr. Hudgins combines development knowledge with his ship design background to engineer solutions that allow rapid transformation required for continuous mission success. Mr. Hudgins is steadfast in the development of secure, modular, DRY applications, even when presented with complex challenges introduced by working in antiquated Department of Defense (DoD) environments.</p>      
+      <p>Click the link below to get in touch.</p>
+      <a class="btn btn-primary btn-lg" href="./contact.html" role="button">Contact Me</a>
+    </div>
+
+
+  
  <!-- footer starts here -->
 <footer class="footer fixed-bottom navbar-dark bg-dark">
   <div class="footer-container">

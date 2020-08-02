@@ -1,46 +1,18 @@
-/* Hide cards on load */
-#videoCard{
-    display: none;
-}
-#workhistory{
-    display: none;
-}
-#musicCard{
-    display: none;
-}
-#portfolioContent{
-    display: none;
-}
-.jumbotron{
-    margin: 0px;
-    padding-bottom: 15px;
-}
-.whJumbotron{
-    background-color: rgb(107, 146, 156);
-    padding: 15px;
+body{
+    /* set font for the entire page */
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #E9ECEF;
+    margin: 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .AboutMeJumbo{
     padding: 30px;
     background-color: #456588bb;
     color: whitesmoke;
 }
-
-
-.highcharts-background .highcharts-plot-border .highcharts-div #highChart{
-    color: black;
-    background-color: black;
-}
-
-#contactContent{
-    display: none;
-}
-body{
-    /* set font for the entire page */
-    font-family: 'Ubuntu', sans-serif;
-    /* background-image: url("https://i.imgur.com/lxdXhnM.jpg"); */
-    background-color: #E9ECEF;
-    margin: 0;
-    margin-bottom: 50px;
+div.jumbotron.jumbotron-fluid{
+    padding-top: 0px;
 }
 /* style all links */
 a {
@@ -60,18 +32,13 @@ header a{
 #NavbarNametag a{
     color: white;
 }
-/* main page styles */
-
 
 /* style the header contents */
 header{
     width: 100%;
-    height: 50px;
     border: 5px;
 }
-
-
-/* weird custom nametag thingy */
+/* custom nametag */
 #NavbarNametag{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -99,9 +66,9 @@ header{
     padding-right: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
-  }
+}
 
-/* changing bootsrtap things I don't like */
+/* changing bootstrap things I don't like */
 .clearfix{
     overflow: auto;
 }
@@ -115,12 +82,17 @@ header{
     border-radius: 15px;
     padding: 10px;
 }
-
 .card-title{
     color: rgb(89, 170, 164);
 }
 .card-text{
     color: gray;
+}
+
+.card-img-personal{
+    border-color: #E9ECEF;
+    border-style: dashed;
+    border-radius: 50%;
 }
 
 .portfolio-item a img{
@@ -137,8 +109,6 @@ header{
     border-color: rgb(89, 170, 164);
     border-radius: 0px;
 }
-
-
 
 /* footer stuff below */
 .footer-container{
@@ -161,15 +131,12 @@ header{
     border-radius: 25px;
 }
 
-
 .footer-top-strip{
     background-color:  rgb(89, 170, 164);
     top: 0px;
     height: 5px;
     width: 100%;
 }
-
-
 
 .plainfooter{
     top: 0px;
@@ -178,60 +145,22 @@ header{
     height: 50px;
 }
 
-/* styles for id  footer music player */
-#wrapper{
-    float: center;
-    text-align:center;
-    margin:0 auto;
-    padding:0px;
-    width:100%;
-    display: none;
-}
-
-#player{
-    bottom: 0;
-    float: left;
-    width: 100%;
-    height: 50px;
-    padding: 5, 5, 5, 5;
-    box-sizing:border-box;
-    background-color: rgba(89, 170, 165, 0.950);
-    z-index: 2;
-}
-/* costome player icons */
-input[type="image"] {
- height:30px;
- margin-top:10px;
-}
-input[type="range"] {
-    height:30px;
-    margin-top:10px;
-   }
-   #change_vol{
-    height:30px;
-    margin-top:10px;
-   }
-#vol_img {
-    padding: 20px;
-    width:30px;
-}
-
 /* @media for tablets and phones */
 @media screen and (max-width: 550px) {
+    body{
+        /* set font for the entire page */
+        font-family: 'Ubuntu', sans-serif;
+        background-color: #E9ECEF;
+        margin: 0;
+        margin-bottom: 60px;
+        margin-top: 105px;
+    }
     #topNav{
         width: 100%;
     }
     ul#topNav.nav{
         height: 50px;
-
     }
-    #change_vol{
-        display: none;
-    }
-    main{
-        margin-top: 80px;
-    }
-  
     #NavbarNametag{
         text-align: center;
         width: 100%;
@@ -241,20 +170,10 @@ input[type="range"] {
         /* position: absolute; */
     }
 
-    .aboutmeJumbotron{
-        padding-top: 50px;
-    }
-
-
 }
 @media screen and (max-width: 880px) {
-
-  
     #NavbarNametag{
         margin-right: -15%;
         /* position: absolute; */
     }
-
-
-
 }
