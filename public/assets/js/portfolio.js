@@ -30,7 +30,6 @@ $(".contact").on("click", function() {
     $("#contactContent").css("display", "initial")
 });
 
-
 // Portfolio cards hide here
 // show skydiving (music not needed not possible)
 $(".videoLink1").on("click", function() {
