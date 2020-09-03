@@ -18,6 +18,7 @@ router.get("/", function(req, res) {
   // Query posts for all posts
   db.Project.findAll({
     // Add order conditions here....
+    order: [['id', 'DESC']],
   }).then(function (projectData) {
     console.log(projectData)
     // create handle bars obj to be rendered
